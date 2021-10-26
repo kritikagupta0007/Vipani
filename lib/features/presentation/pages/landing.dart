@@ -32,8 +32,8 @@ class _LandingPageState extends State<LandingPage> {
                 )),
           ),
           Container(
-              width: 450,
-              height: 880,
+              width: MediaQuery.of(context).size.width * 1,
+              height: MediaQuery.of(context).size.height * 1,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                     begin: Alignment.topCenter,
@@ -50,12 +50,12 @@ class _LandingPageState extends State<LandingPage> {
           Padding(
             padding: const EdgeInsets.fromLTRB(44, 90, 0.8, 0),
             child: Text(
-              'Welcome to Vipani',
+              'Welcome to        Vipani',
               textAlign: TextAlign.left,
               style: TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Inter',
-                  fontSize: 50,
+                  fontSize: 40,
                   letterSpacing: 0,
                   fontWeight: FontWeight.bold,
                   height: 1),
@@ -91,7 +91,7 @@ class _LandingPageState extends State<LandingPage> {
 
   Widget _bottomText() {
     return Padding(
-      padding: EdgeInsets.all(18),
+      padding: EdgeInsets.all(16),
       child: Container(
         child: Text(
           'By continuing, you agree to Vipani Terms&Service and acknowledge you’ve read our Privacy policy',
@@ -121,8 +121,8 @@ class EnterButton extends StatelessWidget {
       child: InkWell(
         onTap: onTap,
         child: Container(
-            width: 400,
-            height: 70,
+            width: MediaQuery.of(context).size.width * 0.9,
+            height: MediaQuery.of(context).size.height * 0.09,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.all(
                 Radius.circular(30),

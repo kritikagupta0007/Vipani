@@ -60,6 +60,7 @@ class _FlowPageState extends State<FlowPage> {
               style: TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1),
                   fontFamily: 'Inter',
+                  fontWeight: FontWeight.bold,
                   fontSize: 18,
                   height: 2.5),
             ),
@@ -71,8 +72,8 @@ class _FlowPageState extends State<FlowPage> {
                     begin: Alignment(0.5, -0.5),
                     end: Alignment(0.5, 0.5),
                     colors: [
-                      Color.fromRGBO(255, 75, 43, 1),
-                      Color.fromRGBO(255, 65, 108, 1)
+                      Color.fromRGBO(255, 75, 43, 1).withOpacity(0.8),
+                      Color.fromRGBO(255, 65, 108, 1).withOpacity(0.8)
                     ]))),
       ),
     );
@@ -84,9 +85,11 @@ class _FlowPageState extends State<FlowPage> {
       child: Container(
           width: 320,
           height: 64,
+          
           decoration: BoxDecoration(
             border: Border.all(
               color: Color.fromRGBO(255, 75, 43, 1),
+              width: 4,
             ),
             borderRadius: BorderRadius.all(
               Radius.circular(10),

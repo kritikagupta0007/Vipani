@@ -107,6 +107,10 @@ class CountryWidget extends StatelessWidget {
             child: TextField(
               decoration: InputDecoration(
                 hintText: "Enter Conuntry",
+                hintStyle: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
                 border: InputBorder.none,
               ),
             ),
@@ -133,7 +137,12 @@ class MobileNumberWidget extends StatelessWidget {
             child: TextField(
               decoration: InputDecoration(
                 hintText: "Mobile Number",
+                hintStyle: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
                 border: InputBorder.none,
+                suffixIcon: Icon(Icons.password_outlined),
               ),
               keyboardType: TextInputType.number,
             ),
