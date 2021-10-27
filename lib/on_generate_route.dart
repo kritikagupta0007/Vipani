@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:vipani/features/presentation/pages/addinfoemail.dart';
 import 'package:vipani/features/presentation/pages/changepassword.dart';
 import 'package:vipani/features/presentation/pages/flow.dart';
+import 'package:vipani/features/presentation/pages/home_page.dart';
+import 'package:vipani/features/presentation/pages/home_screen.dart';
 import 'package:vipani/features/presentation/pages/landing.dart';
 import 'package:vipani/features/presentation/pages/loginemail.dart';
 import 'package:vipani/features/presentation/pages/logingoogle.dart';
@@ -80,6 +82,12 @@ class OnGenerateRoute {
         {
           return materialBuilder(
             widget: VerifyNumberPage(),
+          );
+        }
+      case PageConst.homePage:
+        {
+          return materialBuilder(
+            widget: HomeScreen(),
           );
         }
       default:

@@ -5,6 +5,7 @@ import 'package:vipani/on_generate_route.dart';
 
 void main() => runApp(MaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData.dark(),
       title: "Shop App",
       onGenerateRoute: OnGenerateRoute.route,
       initialRoute: "/",

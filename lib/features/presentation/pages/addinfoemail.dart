@@ -26,7 +26,7 @@ class _AddInfoState extends State<AddInfo> {
           ButtonWidget(
               text: "Continue",
               onTap: () {
-                Navigator.pushNamed(context, PageConst.landingPage);
+                Navigator.pushNamed(context, PageConst.homePage);
               }),
         ],
       ),

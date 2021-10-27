@@ -25,7 +25,7 @@ class _NamePageState extends State<NamePage> {
           ButtonWidget(
               text: "Continue",
               onTap: () {
-                Navigator.pushNamed(context, PageConst.passwordPage);
+                Navigator.pushNamed(context, PageConst.homePage);
               }),
         ],
       ),

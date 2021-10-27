@@ -27,8 +27,7 @@ class _PasswordPageState extends State<PasswordPage> {
           ButtonWidget(
             text: "Continue",
             onTap: () {
-              Navigator.pushNamedAndRemoveUntil(
-                  context, PageConst.landingPage, (route) => false);
+              Navigator.pushNamed(context, PageConst.homePage);
             },
           ),
         ],
