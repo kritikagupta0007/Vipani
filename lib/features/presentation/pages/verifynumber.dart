@@ -20,11 +20,13 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(backgroundColor: Colors.black),
-      body: Stack(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           HeadTextWidget(title: "Verify your Number"),
           _text(),
           _pincodecontroller(),
+          _verifyOtp(),
           ButtonWidget(
             text: "Verify",
             onTap: () {
@@ -38,7 +40,7 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
 
   Widget _text() {
     return Padding(
-        padding: EdgeInsets.fromLTRB(80, 110, 40, 0),
+        padding: EdgeInsets.fromLTRB(80, 40, 40, 0),
         child: Text(
           'Enter the OTP sent to +91 6848958236',
           textAlign: TextAlign.center,
@@ -52,9 +54,22 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
         ));
   }
 
+  Widget _verifyOtp() {
+    return Padding(
+      padding: EdgeInsets.fromLTRB(160, 60, 20, 0),
+      child: InkWell(
+        onTap: () {},
+        child: Text(
+          "Resend OTP",
+          style: TextStyle(fontSize: 20, color: Colors.white),
+        ),
+      ),
+    );
+  }
+
   Widget _pincodecontroller() {
     return Padding(
-      padding: EdgeInsets.fromLTRB(70, 150, 50, 0),
+      padding: EdgeInsets.fromLTRB(70, 20, 50, 0),
       child: PinCodeTextField(
         controller: _pinCodeController,
         maxLength: 4,

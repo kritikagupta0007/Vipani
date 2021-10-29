@@ -17,11 +17,13 @@ class _ResetPasswordState extends State<ResetPassword> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(backgroundColor: Colors.black),
-      body: Stack(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           HeadTextWidget(title: "Reset Password"),
           _text(),
           _emailormobile(),
+          SizedBox(height: 50),
           ButtonWidget(
               text: "Continue",
               onTap: () {
@@ -34,7 +36,7 @@ class _ResetPasswordState extends State<ResetPassword> {
 
   Widget _text() {
     return Padding(
-      padding: EdgeInsets.fromLTRB(30, 80, 70, 0),
+      padding: EdgeInsets.fromLTRB(30, 20, 70, 0),
       child: Text(
         'Enter your email is assosiated your account, we’ve sent an email to reset password',
         textAlign: TextAlign.left,
@@ -51,7 +53,7 @@ class _ResetPasswordState extends State<ResetPassword> {
 
   Widget _emailormobile() {
     return Padding(
-        padding: EdgeInsets.fromLTRB(20, 170, 20, 0),
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Container(
           width: 600,
           height: 70,
@@ -63,6 +65,10 @@ class _ResetPasswordState extends State<ResetPassword> {
             child: TextField(
               decoration: InputDecoration(
                 hintText: "Enter or mobile",
+                hintStyle: TextStyle(
+                  color: Colors.grey[700],
+                  fontWeight: FontWeight.bold,
+                ),
                 border: InputBorder.none,
               ),
             ),

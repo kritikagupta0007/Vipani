@@ -18,10 +18,11 @@ class _LoginGoogleState extends State<LoginGoogle> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(backgroundColor: Colors.black),
-      body: Stack(
-        children: [
+      body: Column(
+        children: <Widget>[
           HeadTextWidget(title: "Log in or sign up to Vipani"),
           EmailWidget(),
+          SizedBox(height: 90),
           ButtonWidget(
               text: "Continue",
               onTap: () {

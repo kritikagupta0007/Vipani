@@ -17,11 +17,13 @@ class _ChangePasswordState extends State<ChangePassword> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(backgroundColor: Colors.black),
-      body: Stack(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           HeadTextWidget(title: "Reset Password"),
           _newpassword(),
           _reEnterPassword(),
+          SizedBox(height: 40),
           ButtonWidget(
               text: "Continue",
               onTap: () {
@@ -35,7 +37,7 @@ class _ChangePasswordState extends State<ChangePassword> {
 
   Widget _newpassword() {
     return Padding(
-        padding: EdgeInsets.fromLTRB(20, 90, 20, 0),
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Container(
           width: 600,
           height: 70,
@@ -47,6 +49,10 @@ class _ChangePasswordState extends State<ChangePassword> {
             child: TextField(
               decoration: InputDecoration(
                 hintText: "Create new password",
+                hintStyle: TextStyle(
+                  color: Colors.grey[700],
+                  fontWeight: FontWeight.bold,
+                ),
                 border: InputBorder.none,
               ),
             ),
@@ -56,7 +62,7 @@ class _ChangePasswordState extends State<ChangePassword> {
 
   Widget _reEnterPassword() {
     return Padding(
-        padding: EdgeInsets.fromLTRB(20, 180, 20, 0),
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Container(
           width: 600,
           height: 70,
@@ -68,6 +74,10 @@ class _ChangePasswordState extends State<ChangePassword> {
             child: TextField(
               decoration: InputDecoration(
                 hintText: "Re-Enter Password",
+                hintStyle: TextStyle(
+                  color: Colors.grey[700],
+                  fontWeight: FontWeight.bold,
+                ),
                 border: InputBorder.none,
               ),
             ),

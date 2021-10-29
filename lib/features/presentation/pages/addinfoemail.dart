@@ -18,11 +18,13 @@ class _AddInfoState extends State<AddInfo> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(backgroundColor: Colors.black),
-      body: Stack(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           HeadTextWidget(title: "Add Info"),
           _fullName(),
           _strongPassword(),
+          SizedBox(height: 50),
           ButtonWidget(
               text: "Continue",
               onTap: () {
@@ -35,7 +37,7 @@ class _AddInfoState extends State<AddInfo> {
 
   Widget _fullName() {
     return Padding(
-        padding: EdgeInsets.fromLTRB(20, 100, 20, 0),
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Container(
           width: 600,
           height: 70,
@@ -47,6 +49,8 @@ class _AddInfoState extends State<AddInfo> {
             child: TextField(
               decoration: InputDecoration(
                 hintText: "Enter your full name",
+                hintStyle: TextStyle(
+                    color: Colors.grey[700], fontWeight: FontWeight.bold),
                 border: InputBorder.none,
               ),
             ),
@@ -56,7 +60,7 @@ class _AddInfoState extends State<AddInfo> {
 
   Widget _strongPassword() {
     return Padding(
-        padding: EdgeInsets.fromLTRB(20, 190, 20, 0),
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Container(
           width: 600,
           height: 70,
@@ -68,6 +72,8 @@ class _AddInfoState extends State<AddInfo> {
             child: TextField(
               decoration: InputDecoration(
                 hintText: "Create strong password",
+                hintStyle: TextStyle(
+                    color: Colors.grey[700], fontWeight: FontWeight.bold),
                 border: InputBorder.none,
               ),
             ),

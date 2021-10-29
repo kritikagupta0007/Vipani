@@ -18,10 +18,12 @@ class _NamePageState extends State<NamePage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(backgroundColor: Colors.black),
-      body: Stack(
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           HeadTextWidget(title: "Whats your Name"),
           NameWidget(),
+          SizedBox(height: 90),
           ButtonWidget(
               text: "Continue",
               onTap: () {

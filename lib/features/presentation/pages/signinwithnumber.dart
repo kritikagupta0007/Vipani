@@ -18,7 +18,7 @@ class _MobileSignInState extends State<MobileSignIn> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(backgroundColor: Colors.black),
-      body: Stack(
+      body: Column(
         children: [
           HeadTextWidget(title: "Log in or sign up to Vipani"),
           CountryWidget(),

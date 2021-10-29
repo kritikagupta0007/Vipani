@@ -18,10 +18,11 @@ class _GmailLoginState extends State<GmailLogin> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(backgroundColor: Colors.black),
-      body: Stack(
+      body: Column(
         children: [
           HeadTextWidget(title: "Log in or sign up to Vipani"),
           EmailWidget(),
+          SizedBox(height: 90),
           ButtonWidget(
               text: "Continue",
               onTap: () {

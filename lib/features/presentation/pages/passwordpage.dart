@@ -19,7 +19,7 @@ class _PasswordPageState extends State<PasswordPage> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(backgroundColor: Colors.black),
-      body: Stack(
+      body: Column(
         children: [
           HeadTextWidget(title: "Enter  your  Password"),
           PasswordWidget(),
@@ -37,7 +37,7 @@ class _PasswordPageState extends State<PasswordPage> {
 
   Widget _forgotPassword() {
     return Padding(
-      padding: EdgeInsets.fromLTRB(140, 320, 20, 0),
+      padding: EdgeInsets.fromLTRB(20, 60, 20, 0),
       child: InkWell(
         onTap: () => Navigator.pushNamed(context, PageConst.resetPassword),
         child: Text(

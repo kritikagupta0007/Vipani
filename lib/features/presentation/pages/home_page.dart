@@ -30,7 +30,8 @@ class _HomePageState extends State<HomePage>
 
   @override
   void initState() {
-    _videoPlayerController = VideoPlayerController.asset('video/intro.mp4')
+    _videoPlayerController = VideoPlayerController.network(
+        'https://fluttervod-dev-output-aemgmnry.s3.us-east-2.amazonaws.com/for_documentation/for_documentation_1500.m3u8')
       ..initialize()
       ..setLooping(true)
       ..play().then((value) {

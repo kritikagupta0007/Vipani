@@ -50,7 +50,7 @@ class _LandingPageState extends State<LandingPage> {
           Padding(
             padding: const EdgeInsets.fromLTRB(44, 90, 0.8, 0),
             child: Text(
-              'Welcome to        Vipani',
+              'Welcome to \nVipani',
               textAlign: TextAlign.left,
               style: TextStyle(
                   color: Color.fromRGBO(255, 255, 255, 1),
@@ -92,15 +92,17 @@ class _LandingPageState extends State<LandingPage> {
   Widget _bottomText() {
     return Padding(
       padding: EdgeInsets.all(16),
-      child: Container(
-        child: Text(
-          'By continuing, you agree to Vipani Terms&Service and acknowledge you’ve read our Privacy policy',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-              color: Colors.white,
-              fontFamily: 'Inter',
-              fontSize: 15,
-              height: 1.3),
+      child: SingleChildScrollView(
+        child: Container(
+          child: Text(
+            'By continuing, you agree to Vipani Terms&Service and acknowledge you’ve read our Privacy policy',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Inter',
+                fontSize: 15,
+                height: 1.3),
+          ),
         ),
       ),
     );

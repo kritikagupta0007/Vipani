@@ -85,7 +85,6 @@ class _FlowPageState extends State<FlowPage> {
       child: Container(
           width: 320,
           height: 64,
-          
           decoration: BoxDecoration(
             border: Border.all(
               color: Color.fromRGBO(255, 75, 43, 1),

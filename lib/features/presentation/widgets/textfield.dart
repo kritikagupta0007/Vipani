@@ -8,7 +8,7 @@ class EmailWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.fromLTRB(20, 150, 20, 0),
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Container(
           width: 600,
           height: 70,
@@ -20,9 +20,10 @@ class EmailWidget extends StatelessWidget {
             child: TextField(
               controller: controller,
               decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: "Email",
-              ),
+                  border: InputBorder.none,
+                  hintText: "Email",
+                  hintStyle: TextStyle(
+                      color: Colors.grey[700], fontWeight: FontWeight.bold)),
               autofocus: false,
             ),
           ),
@@ -41,7 +42,7 @@ class _PasswordWidgetState extends State<PasswordWidget> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.fromLTRB(25, 150, 20, 0),
+        padding: EdgeInsets.fromLTRB(25, 20, 20, 0),
         child: Container(
           width: 600,
           height: 70,
@@ -53,6 +54,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
             child: TextField(
               decoration: InputDecoration(
                 hintText: "Password",
+                hintStyle: TextStyle(
+                    color: Colors.grey[700], fontWeight: FontWeight.bold),
                 border: InputBorder.none,
               ),
               autofocus: false,
@@ -69,7 +72,7 @@ class NameWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.fromLTRB(20, 100, 20, 0),
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Container(
           width: 600,
           height: 70,
@@ -81,6 +84,8 @@ class NameWidget extends StatelessWidget {
             child: TextField(
               decoration: InputDecoration(
                 hintText: "Enter your Name",
+                hintStyle: TextStyle(
+                    color: Colors.grey[700], fontWeight: FontWeight.bold),
                 border: InputBorder.none,
               ),
             ),
@@ -95,7 +100,7 @@ class CountryWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.fromLTRB(20, 150, 20, 0),
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Container(
           width: 600,
           height: 70,
@@ -108,10 +113,13 @@ class CountryWidget extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: "Enter Conuntry",
                 hintStyle: TextStyle(
+                  color: Colors.grey[700],
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
                 border: InputBorder.none,
+                prefixText: "+91 ",
+                suffixIcon: Icon(Icons.keyboard_arrow_right_outlined),
               ),
             ),
           ),
@@ -125,7 +133,7 @@ class MobileNumberWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: EdgeInsets.fromLTRB(20, 240, 20, 0),
+        padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
         child: Container(
           width: 600,
           height: 70,
@@ -138,6 +146,7 @@ class MobileNumberWidget extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: "Mobile Number",
                 hintStyle: TextStyle(
+                  color: Colors.grey[700],
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),

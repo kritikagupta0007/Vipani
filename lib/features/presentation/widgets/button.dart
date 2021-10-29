@@ -9,7 +9,7 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(20, 380, 20, 0),
+      padding: EdgeInsets.fromLTRB(20, 50, 20, 0),
       child: InkWell(
         onTap: onTap,
         child: Container(

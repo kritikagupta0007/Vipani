@@ -38,6 +38,7 @@ dependencies:
   font_awesome_flutter:
   responsive_builder:
   video_player:
+  http: ^0.13.4
   marquee:
   camera: 
   carousel_slider:
