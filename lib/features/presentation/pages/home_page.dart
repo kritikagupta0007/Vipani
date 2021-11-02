@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:marquee/marquee.dart';
@@ -18,7 +19,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage>
-    with SingleTickerProviderStateMixin {
+    with AutomaticKeepAliveClientMixin, SingleTickerProviderStateMixin {
   late VideoPlayerController _videoPlayerController;
   bool _isPlaying = true;
   int _followingForYouController = 0;
@@ -27,6 +28,9 @@ class _HomePageState extends State<HomePage>
 
   late AnimationController _animationController;
   final PageController _pageViewController = PageController(initialPage: 1);
+
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   void initState() {
@@ -51,10 +55,17 @@ class _HomePageState extends State<HomePage>
         return Scaffold(
             body: Stack(
           children: <Widget>[
-            PageView.builder(
-              scrollDirection: Axis.vertical,
+            CarouselSlider.builder(
+              options: CarouselOptions(
+                scrollDirection: Axis.vertical,
+                viewportFraction: 1.0,
+                aspectRatio: 0.10,
+                autoPlay: false,
+                height: 900,
+              ),
               itemCount: FakeRepository.data.length,
-              itemBuilder: (BuildContext context, int index) {
+              itemBuilder:
+                  (BuildContext context, int index, int pageViewIndex) {
                 return Stack(
                   children: <Widget>[
                     _videoPlayerController.value.isInitialized
@@ -94,7 +105,6 @@ class _HomePageState extends State<HomePage>
                         : Container(),
                     _rightSideButtonsWidgets(index),
                     _textDataWidgetBottom(sizingInformation, index),
-                    // _shopCarousel(sizingInformation, index),
                   ],
                 );
               },
@@ -122,9 +132,9 @@ class _HomePageState extends State<HomePage>
 //         ));
 //   }
 
-//   Widget _shopVideo(SizingInformation sizingInformation, int index) {
-//     return Stack(children: <Widget>[]);
-//   }
+  // Widget _shopVideo(SizingInformation sizingInformation, int index) {
+  //   return
+  // }
 
   TextStyle _textStyleFollowingForYou(Color color) {
     return TextStyle(fontSize: 18, color: color, fontWeight: FontWeight.w500);

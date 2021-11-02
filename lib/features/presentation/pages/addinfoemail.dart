@@ -18,19 +18,21 @@ class _AddInfoState extends State<AddInfo> {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(backgroundColor: Colors.black),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          HeadTextWidget(title: "Add Info"),
-          _fullName(),
-          _strongPassword(),
-          SizedBox(height: 50),
-          ButtonWidget(
-              text: "Continue",
-              onTap: () {
-                Navigator.pushNamed(context, PageConst.homePage);
-              }),
-        ],
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            HeadTextWidget(title: "Add Info"),
+            _fullName(),
+            _strongPassword(),
+            SizedBox(height: 50),
+            ButtonWidget(
+                text: "Continue",
+                onTap: () {
+                  Navigator.pushNamed(context, PageConst.homePage);
+                }),
+          ],
+        ),
       ),
     );
   }

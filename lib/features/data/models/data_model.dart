@@ -10,7 +10,8 @@ class DataModel {
   final String profileUrl;
 
   DataModel(
-      {required this.name,
+      {
+      required this.name,
       required this.likesCount,
       required this.products,
       required this.messagesCount,
@@ -20,3 +21,5 @@ class DataModel {
       required this.musicName,
       required this.profileUrl});
 }
+
+

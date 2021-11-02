@@ -11,7 +11,9 @@ class HomeScreen extends StatefulWidget {
   _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomeScreenState extends State<HomeScreen>
+//  with AutomaticKeepAliveClientMixin
+{
   int _pageIndex = 1;
 
   PageController _pageController = PageController(
@@ -23,6 +25,7 @@ class _HomeScreenState extends State<HomeScreen> {
     RightPage(),
   ];
 
+  
   @override
   Widget build(BuildContext context) {
     return ResponsiveBuilder(
@@ -50,11 +53,10 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               items: const [
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.mail), title: Text("Messages")),
+                    icon: Icon(Icons.mail), label: "Messages"),
+                BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.home), title: Text("Home")),
-                BottomNavigationBarItem(
-                    icon: Icon(Icons.person), title: Text("Profile")),
+                    icon: Icon(Icons.person), label: "Profile")
               ],
             ),
             body: PageView(
