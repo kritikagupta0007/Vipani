@@ -5,13 +5,13 @@ class Shop_Models {
   final String shop_preview_video;
   final List<Product_Item> product_items; //for left page
 
-  Shop_Models(
-    this.id,
-    this.shop_name,
-    this.address,
-    this.shop_preview_video,
-    this.product_items,
-  );
+  Shop_Models({
+    required this.id,
+    required this.shop_name,
+    required this.address,
+    required this.shop_preview_video,
+    required this.product_items,
+  });
 }
 
 class Product_Item {
@@ -19,5 +19,6 @@ class Product_Item {
   final String product;
   final int price;
 
-  Product_Item(this.name, this.product, this.price);
+  Product_Item(
+      {required this.name, required this.product, required this.price});
 }

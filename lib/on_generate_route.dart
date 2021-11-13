@@ -12,7 +12,10 @@ import 'package:vipani/features/presentation/pages/passwordpage.dart';
 import 'package:vipani/features/presentation/pages/resetpassword.dart';
 import 'package:vipani/features/presentation/pages/signinwithnumber.dart';
 import 'package:vipani/features/presentation/pages/verifynumber.dart';
+import 'package:vipani/features/presentation/widgets/shop_preview.dart';
 import 'package:vipani/page_const.dart';
+
+int index = 0;
 
 class OnGenerateRoute {
   static Route<dynamic> route(RouteSettings settings) {
@@ -87,7 +90,9 @@ class OnGenerateRoute {
       case PageConst.homePage:
         {
           return materialBuilder(
-            widget: HomeScreen(),
+            widget: ShopPreviewWidget(
+              index: 2,
+            ),
           );
         }
       default:

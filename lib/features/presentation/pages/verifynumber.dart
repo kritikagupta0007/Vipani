@@ -56,7 +56,7 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
 
   Widget _verifyOtp() {
     return Padding(
-      padding: EdgeInsets.fromLTRB(160, 60, 20, 0),
+      padding: EdgeInsets.fromLTRB(60, 30, 50, 0),
       child: InkWell(
         onTap: () {},
         child: Text(
@@ -69,10 +69,10 @@ class _VerifyNumberPageState extends State<VerifyNumberPage> {
 
   Widget _pincodecontroller() {
     return Padding(
-      padding: EdgeInsets.fromLTRB(70, 20, 50, 0),
+      padding: EdgeInsets.fromLTRB(50, 20, 50, 0),
       child: PinCodeTextField(
         controller: _pinCodeController,
-        maxLength: 4,
+        maxLength: 5,
         pinBoxRadius: 10,
         pinBoxColor: Colors.white,
       ),

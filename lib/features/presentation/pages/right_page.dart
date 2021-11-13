@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:vipani/features/data/repository/fake_repository.dart';
 
 class RightPage extends StatefulWidget {
-  const RightPage({Key? key}) : super(key: key);
+  late int index;
+  RightPage({Key? key, required this.index}) : super(key: key);
 
   @override
   _RightPageState createState() => _RightPageState();
 }
 
 class _RightPageState extends State<RightPage> {
-  late List<String> product = ["product1", 'product 2', 'product3'];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,14 +19,15 @@ class _RightPageState extends State<RightPage> {
         title: Text("Shop Data"),
       ),
       body: ListView.builder(
-        itemCount: product.length,
-        itemBuilder: (context, index) {
+        itemCount: FakeRepository2.data[widget.index].product_items.length,
+        itemBuilder: (context, ind) {
           return Padding(
             padding: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 5.0),
             child: Card(
                 child: ListTile(
               onTap: () {},
-              title: Text(product[index]),
+              title: Text(
+                  FakeRepository2.data[widget.index].product_items[ind].name),
             )),
           );
         },
