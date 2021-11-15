@@ -4,21 +4,21 @@ import 'package:marquee/marquee.dart';
 import 'package:responsive_builder/responsive_builder.dart';
 import 'package:vipani/features/data/repository/fake_repository.dart';
 import 'package:vipani/features/presentation/pages/add_video_page.dart';
-import 'package:vipani/features/presentation/pages/home_page.dart';
+import 'package:vipani/features/presentation/widgets/shoppreview.dart';
 import 'package:vipani/features/presentation/pages/left_page.dart';
 import 'package:vipani/features/presentation/pages/right_page.dart';
-import 'package:vipani/features/presentation/widgets/message.dart';
+import 'package:vipani/features/presentation/pages/message.dart';
 
-class ShopPreviewWidget extends StatefulWidget {
-  late int index;
-
-  ShopPreviewWidget({Key? key, required this.index}) : super(key: key);
+class BottomNavigationWidget extends StatefulWidget {
+  BottomNavigationWidget({
+    Key? key,
+  }) : super(key: key);
 
   @override
-  _ShopPreviewWidgetState createState() => _ShopPreviewWidgetState();
+  _BottomNavigationWidgetState createState() => _BottomNavigationWidgetState();
 }
 
-class _ShopPreviewWidgetState extends State<ShopPreviewWidget> {
+class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
   // int _initialIndex = 0;
   // final PageController _pageViewController = PageController(initialPage: 1);
   // int _pageIndex = 1;
@@ -32,9 +32,9 @@ class _ShopPreviewWidgetState extends State<ShopPreviewWidget> {
   @override
   void initState() {
     _pages = [
-      HomePage(index: widget.index),
+      ShopPreviewWidget(),
       LeftPage(),
-      RightPage(index: widget.index),
+      LeftPage(),
       MessageWidget(),
       LeftPage(),
     ];

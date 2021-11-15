@@ -8,7 +8,11 @@ import 'package:vipani/features/data/repository/fake_repository.dart';
 import 'package:vipani/features/presentation/pages/home_screen.dart';
 
 class VideoScreen extends StatefulWidget {
-  const VideoScreen({Key? key}) : super(key: key);
+  final Function updateIndex;
+  VideoScreen(
+    this.updateIndex, {
+    Key? key,
+  }) : super(key: key);
 
   @override
   _VideoScreenState createState() => _VideoScreenState();
@@ -42,6 +46,7 @@ class _VideoScreenState extends State<VideoScreen>
               itemCount: FakeRepository.data.length,
               itemBuilder:
                   (BuildContext context, int index, int pageViewIndex) {
+                widget.updateIndex(index);
                 return HomeScreen(index: index);
               },
             ),

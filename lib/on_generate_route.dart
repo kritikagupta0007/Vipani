@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vipani/features/presentation/pages/addinfoemail.dart';
 import 'package:vipani/features/presentation/pages/changepassword.dart';
 import 'package:vipani/features/presentation/pages/flow.dart';
-import 'package:vipani/features/presentation/pages/home_page.dart';
+import 'package:vipani/features/presentation/widgets/shoppreview.dart';
 import 'package:vipani/features/presentation/pages/home_screen.dart';
 import 'package:vipani/features/presentation/pages/landing.dart';
 import 'package:vipani/features/presentation/pages/loginemail.dart';
@@ -12,10 +12,8 @@ import 'package:vipani/features/presentation/pages/passwordpage.dart';
 import 'package:vipani/features/presentation/pages/resetpassword.dart';
 import 'package:vipani/features/presentation/pages/signinwithnumber.dart';
 import 'package:vipani/features/presentation/pages/verifynumber.dart';
-import 'package:vipani/features/presentation/widgets/shop_preview.dart';
+import 'package:vipani/features/presentation/widgets/bottomnavigation.dart';
 import 'package:vipani/page_const.dart';
-
-int index = 0;
 
 class OnGenerateRoute {
   static Route<dynamic> route(RouteSettings settings) {
@@ -90,9 +88,7 @@ class OnGenerateRoute {
       case PageConst.homePage:
         {
           return materialBuilder(
-            widget: ShopPreviewWidget(
-              index: 2,
-            ),
+            widget: BottomNavigationWidget(),
           );
         }
       default:

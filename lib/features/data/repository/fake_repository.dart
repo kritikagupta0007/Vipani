@@ -1,7 +1,7 @@
 import 'package:vipani/features/data/models/data_model.dart';
 import 'package:vipani/features/data/models/shop_models.dart';
 import 'package:vipani/features/presentation/pages/namepage.dart';
-import 'package:vipani/features/presentation/widgets/shop_preview.dart';
+import 'package:vipani/features/presentation/widgets/bottomnavigation.dart';
 
 class FakeRepository {
   static List<DataModel> data = [
