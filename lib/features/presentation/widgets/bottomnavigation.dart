@@ -19,13 +19,6 @@ class BottomNavigationWidget extends StatefulWidget {
 }
 
 class _BottomNavigationWidgetState extends State<BottomNavigationWidget> {
-  // int _initialIndex = 0;
-  // final PageController _pageViewController = PageController(initialPage: 1);
-  // int _pageIndex = 1;
-  // PageController _pageController = PageController(
-  //   initialPage: 1,
-  // );
-
   int _pageController = 0;
   late List<Widget> _pages;
 
